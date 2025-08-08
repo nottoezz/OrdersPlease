@@ -118,7 +118,7 @@ export class TerminalInterface {
   draw() {
     this.ctx.fillStyle = "#000";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-    this.ctx.font = "12px monospace";
+    this.ctx.font = "14px monospace";
     this.ctx.fillStyle = "#00ff00";
     this.ctx.textAlign = "left";
 
