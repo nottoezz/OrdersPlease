@@ -374,27 +374,6 @@ export function setMenuOpen(state) {
 }
 
 // --------------------------------------------
-// ESC Menu Toggle
-// --------------------------------------------
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    const mainMenu = document.getElementById("main-menu");
-    const creditsMenu = document.getElementById("credits-menu");
-
-    const anyOpen =
-      !mainMenu.classList.contains("hidden") ||
-      !creditsMenu.classList.contains("hidden");
-
-    if (anyOpen) {
-      mainMenu.classList.add("hidden");
-      creditsMenu.classList.add("hidden");
-    } else {
-      mainMenu.classList.remove("hidden");
-    }
-  }
-});
-
-// --------------------------------------------
 // Ambient Light Slider Handling
 // --------------------------------------------
 document.getElementById("ambient-slider").addEventListener("input", (e) => {

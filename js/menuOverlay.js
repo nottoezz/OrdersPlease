@@ -1,3 +1,6 @@
+// --------------------------------------------
+// Menu Overlay
+// --------------------------------------------
 import { setMenuOpen } from "./main.js";
 
 export function setupMenuOverlay(startGameCallback, ambientLight) {
@@ -8,13 +11,37 @@ export function setupMenuOverlay(startGameCallback, ambientLight) {
 
   const allMenus = [mainMenu, settingsMenu, creditsMenu, controlsMenu];
 
-  const show = (menuToShow) => {
-    allMenus.forEach((menu) => menu.classList.add("hidden"));
-    menuToShow.classList.remove("hidden");
+  const hideAll = () => allMenus.forEach((m) => m.classList.add("hidden"));
+  const show = (menu) => {
+    hideAll();
+    menu.classList.remove("hidden");
   };
+  const getOpenMenu = () =>
+    allMenus.find((m) => !m.classList.contains("hidden"));
 
+  // --------------------------------------------
+  // Esc toggle
+  // --------------------------------------------
+  const onEsc = (e) => {
+    if (e.key !== "Escape") return;
+    const openMenu = getOpenMenu();
+
+    if (!openMenu) {
+      show(mainMenu);
+      setMenuOpen(true);
+    } else if (openMenu === mainMenu) {
+      hideAll();
+      setMenuOpen(false);
+      startGameCallback();
+    }
+  };
+  window.addEventListener("keydown", onEsc);
+
+  // --------------------------------------------
+  // Buttons
+  // --------------------------------------------
   document.getElementById("close-menu-btn").addEventListener("click", () => {
-    allMenus.forEach((menu) => menu.classList.add("hidden"));
+    hideAll();
     setMenuOpen(false);
     startGameCallback();
   });
