@@ -26,38 +26,40 @@ The experience blends terminal-based gameplay, ambient horror audio, and eerie 3
 - **Custom shaders, lighting effects, and post-processing**
 
 ## 📁 Project Structure
+```
 /terminal-orders/
 ├── /js/           # JavaScript modules
-│   ├── animations.js       # Handles animations
-│   ├── assetLoader.js      # Preloads assets
-│   ├── audio.js            # Audio management
-│   ├── gameLoop.js         # Main game loop
-│   ├── highlightConfig.js  # Syntax highlighting settings
-│   ├── introSequence.js    # Intro cutscene logic
-│   ├── main.js             # Entry script / init
-│   ├── menuOverlay.js      # Menu UI handling
-│   ├── recipes.js          # Game recipes
-│   ├── TerminalInterface.js# Terminal UI and commands
-│   ├── tvOverlay.js        # TV screen overlay
-│   └── utility.js          # Helper functions
+│   ├── animations.js        # Handles animations
+│   ├── assetLoader.js       # Preloads assets
+│   ├── audio.js             # Audio management
+│   ├── gameLoop.js          # Main game loop
+│   ├── highlightConfig.js   # Syntax highlighting settings
+│   ├── introSequence.js     # Intro cutscene logic
+│   ├── main.js              # Entry script / init
+│   ├── menuOverlay.js       # Menu UI handling
+│   ├── recipes.js           # Game recipes
+│   ├── TerminalInterface.js # Terminal UI and commands
+│   ├── tvOverlay.js         # TV screen overlay
+│   └── utility.js           # Helper functions
 │
 ├── /audio/        # Audio assets
-│   ├── ambient.mp3         # Ambient background
-│   ├── click.wav           # UI click sound
-│   ├── error.wav           # Error beep
-│   ├── microwave.wav       # Microwave ding
-│   └── startup.wav         # Terminal startup
+│   ├── ambient.mp3          # Ambient background
+│   ├── click.wav            # UI click sound
+│   ├── error.wav            # Error beep
+│   ├── microwave.wav        # Microwave ding
+│   └── startup.wav          # Terminal startup
 │
 ├── /assets/       # 3D and 2D models / textures
-│   ├── kitchen.glb         # Kitchen 3D model
-│   ├── table.glb           # Table 3D model
-│   ├── tv_screen.png       # TV overlay texture
+│   ├── kitchen.glb          # Kitchen 3D model
+│   ├── table.glb            # Table 3D model
+│   ├── tv_screen.png        # TV overlay texture
 │   └── ...
 │
 ├── index.html     # Entry point
 ├── thanks.html    # Attributions
 ├── style.css      # Stylesheets
 └── README.md      # Project overview
+```
 
 ## 🎧 Audio Credits
 
@@ -131,6 +133,7 @@ To run the project locally:
 ---
 
 Enjoy the horror and don't forget to complete your orders... correctly.
+
 
 
 
